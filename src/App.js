@@ -2,7 +2,7 @@ import "./App.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useAppContext } from "./servicos/Context";
+import { useAppContext } from "./servicos/context";
 import Formulario from "./componentes/formulario/Formulario";
 import ErrorMessageBox from "./componentes/erroMessage/ErrorMessageBox";
 function App() {

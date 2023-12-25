@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import { useAppContext } from "../../servicos/Context";
+import { useAppContext } from "../../servicos/context";
 function Formulario() {
   const { setFato, setError, setEspera, espera } = useAppContext();
   const [anoFato, setAnoFato] = useState("");
