@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { useAppContext } from "./servicos/Context";
+import Formulario from "./componentes/formulario/Formulario";
+import ErrorMessageBox from "./componentes/erroMessage/ErrorMessageBox";
 function App() {
+  const { fato, error } = useAppContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid className="bg-dark text-light">
+      <Row className="justify-content-center align-items-center vh-100 fs-5">
+        <h1 className="text-center mt-3 fs-1">Fatos históricos</h1>
+        <Col className="d-flex flex-column justify-content-center align-items-center">
+          <Formulario />
+          <p>{fato.anoFato}</p>
+          <p> {error && <ErrorMessageBox />}</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
