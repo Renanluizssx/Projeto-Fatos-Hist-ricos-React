@@ -1,7 +1,5 @@
 import React from "react";
-import { useAppContext } from "../../servicos/context";
-const ErrorMessageBox = () => {
-  const { error } = useAppContext();
+const ErrorMessageBox = ({ error }) => {
   return (
     <div className="error-message">
       <p>{error}</p>

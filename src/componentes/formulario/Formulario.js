@@ -1,12 +1,11 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import { useAppContext } from "../../servicos/context";
-function Formulario() {
-  const { setFato, setError, setEspera, espera } = useAppContext();
+function Formulario({ setError, setFato }) {
   const [anoFato, setAnoFato] = useState("");
   const [limpaInput, setLimpaInput] = useState("");
   const [validated, setValidated] = useState(false);
+  const [espera, setEspera] = useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
